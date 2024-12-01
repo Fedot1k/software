@@ -9,13 +9,12 @@ def ss(n, b):
 for p in range(9, 20):
     for x in ('0123456789ABCDEFGHIJ'):
         for y in ('0123456789ABCDEFGHIJ'):
-            for z in ('0123456789ABCDEFGHIJ'):
-                f1 = str(y) + '2' + str(y)
-                f2 = str(y) + '87'
-                f3 = '1' + str(x) + str(z) + str(z)
-                try: 
-                    if (int(f1, p) + int(f2, p)) == int(f3, p):
-                        print(x, y, z, p)
-                except:
-                    pass
+            f1 = y + '2' + y
+            f2 = y + '87'
+            f3 = '1' + x + x
+            try: 
+                if (int(f1, p) + int(f2, p)) == int(f3, p):
+                    print(x, y, p)
+            except:
+                pass
 
