@@ -1,11 +1,18 @@
-import sys
+from functools import lru_cache
 
-sys.setrecursionlimit(1000000000)
+@lru_cache(None)
 
-def f(n):
-    if n <= 1:
-        return 3
-    else:
-        return f(n-1) + 2 * f(n-2) - 5
 
-print(f(100))
+def f(n, m):
+    if m > n:
+        return 0
+    elif m <= n and n%m==0:
+        return 1 + f(n, m+1)
+    elif m <= n and n%m!=0:
+        return f(n, m+1)
+
+
+print(f(107864, 3))
+
+
+
