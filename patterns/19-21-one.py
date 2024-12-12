@@ -3,7 +3,7 @@ from functools import lru_cache
 def moves(s):
     return s + 1, s + 2, s * 3  # возможные действия
 
-@lru_cache(maxsize=100000)
+@lru_cache(None)
 
 def game(s):
     if s >= 65: return 'w' # число необходимое для победы
