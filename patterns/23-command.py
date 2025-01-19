@@ -1,11 +1,8 @@
-def f(s, x):
-    if x == 1001:
-        res.append(s)
+def f(s, k):
+    if s == k:
         return 1
+    if s > k or s == 20: # траектория не содержит - 20
+        return 0
+    return f(s + 1, k) + f(s * s, k) + f(s + 3, k) # возможные действия
 
-    return f(s + 2, x + 1) + f(s + 4, x + 1) + f(s + 5, x + 1) # возможные действия
-
-print(f(31, 0))
-
-print(res)
-
+print(f(2, 15) * f(15, 35)) # s - начало, k - конец, траектория содержит - 15

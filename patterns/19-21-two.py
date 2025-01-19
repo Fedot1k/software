@@ -3,7 +3,7 @@ import math
 
 def moves(s):
     a, b = s
-    return (a+1, b), (a, b+1), (a*2, b), (a, b*2) # возможные действия
+    return (a+1, b), (a, b+1), (a*2, b), (a, b*2) # возможные действия, верхнее ограничение = не передавать
 
 @lru_cache(None)
 
