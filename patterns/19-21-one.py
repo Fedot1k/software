@@ -2,7 +2,7 @@ from functools import lru_cache
 import math
 
 def moves(s):
-    return s + 1, s * 3 # возможные действия, верхнее ограничение = не передавать
+    return (s + 1, s * 3) if s * 3 <= 80 else ((s + 1, ) if s + 1 <= 80 else ()) # возможные действия, верхнее ограничение = не передавать
 
 @lru_cache(None)
 def game(s):
@@ -13,5 +13,5 @@ def game(s):
     if all(game(m) == 'p1' or game(m) == 'p2' for m in moves(s)): return 'b2'
 
 for s in range(1, 56):  # Количество камней в куче
-    if game(s) == 'b2':  # b - Ваня, p - Петя, 1 - первый ход, 2 - второй ход
+    if game(s) == 'b1':  # b - Ваня, p - Петя, 1 - первый ход, 2 - второй ход
         print(s, game(s))
