@@ -12,7 +12,7 @@ def game(s):
     if any(game(m) == 'w' for m in moves(s)): return 'p1'
     if all(game(m) == 'p1' for m in moves(s)): return 'b1' # <all> для нормальной игры, <any> для плохой игры
     if any(game(m) == 'b1' for m in moves(s)): return 'p2'
-    if all(game(m) == 'p1' or game(m) == 'p2' for m in moves(s)): return 'b2'
+    if all(game(m) in ('p1', 'p2') for m in moves(s)): return 'b2'
 
 
 for s_ in range(1, 77):
