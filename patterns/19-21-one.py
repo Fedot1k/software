@@ -8,7 +8,7 @@ def moves(s):
 def game(s):
     if s >= 56: return 'w'  # Число необходимое для победы
     if any(game(m) == 'w' for m in moves(s)): return 'p1'
-    if all(game(m) == 'p1' for m in moves(s)): return 'b1'
+    if all(game(m) == 'p1' for m in moves(s)): return 'b1' # <all> для нормальной игры, <any> для плохой игры
     if any(game(m) == 'b1' for m in moves(s)): return 'p2'
     if all(game(m) == 'p1' or game(m) == 'p2' for m in moves(s)): return 'b2'
 
