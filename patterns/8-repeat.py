@@ -1,10 +1,11 @@
-from itertools import *
+from itertools import product
 
 cnt = 0
 
-for x in product('ГЕНОСТХЮ', repeat = 4): # повторяющиеся символы
-    cnt += 1
+for x in product('0123456789ABCDE', repeat=5):
     s = ''.join(x)
-    if (s[0] != 'Н') and (s.count('О') >= 2) and ('С' not in s) and (cnt % 2!= 0):
-        print(cnt)
+    bro = s.count('A') + s.count('B') + s.count('C') + s.count('D') + s.count('E')
+    if (s[0] != '0') and (s.count('8') == 1) and (bro >= 2):
+        cnt += 1
 
+print(cnt)

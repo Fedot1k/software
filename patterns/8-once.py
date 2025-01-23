@@ -1,4 +1,4 @@
-from itertools import *
+from itertools import permutations
 
 cnt = 0
 
