@@ -1,4 +1,5 @@
 for n in range(1, 1000):
+    
     st = bin(n)[2:]
     
     if st.count('1') % 2 == 0:
