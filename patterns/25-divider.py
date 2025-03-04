@@ -1,19 +1,7 @@
-def dels_(num):
-    d = [1, num]
-    for i in range(2, int(num**0.5) + 1):
-        if num % i == 0:
-            d.append(i)
-            d.append(num // i)
-    return sorted(list(set(d)))
+def div(n):
+    return sorted(set([x for i in range(2, int(n**0.5) + 1) if n % i == 0 for x in (i, n // i)]))
 
+def prime(n):
+    return n > 1 and all([n%i!=0 for i in range(2, int(n**0.5) + 1)])
 
-
-def is_prime(num):
-    for i in range(2, int(num**0.5) + 1):
-        if num % i == 0:
-            return False
-    return True
-
-
-
-print(len(dels_(394450)))
+print(prime(12), div(12))
