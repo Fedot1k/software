@@ -1,6 +1,6 @@
 from ipaddress import *
 
-net = ip_network('216.130.64.0/255.255.192.0')
+net = ip_network('216.130.64.0/255.255.192.0', strict=False)
 
 res = 0
 

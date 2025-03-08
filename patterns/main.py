@@ -1,9 +1,19 @@
-s = '0' + '1' * 122 + '2' * 41 + '0'
+twos = [2**n for n in range(0, 20)]
+res = []
 
-while ('00' not in s):
-    s = s.replace('02', '101', 1)
-    s = s.replace('11', '2', 1)
-    s = s.replace('012', '30', 1)
-    s = s.replace('010', '00', 1)
+for j in range(65, 100):
+    for n in range(1, j):
 
-print(sum([int(i) for i in s if i != '>']))
+        s = '0' + '1' * n + '2' * (j-1-n)
+
+        g = sum(int(i) for i in s)
+
+        while ('01' in s) or ('02' in s):
+            s = s.replace('02', '110', 1)
+            s = s.replace('01', '2120', 1)
+
+        if sum(int(i) for i in s) in twos:
+            print(j, n)
+            res.append(g)
+
+print(min(res))

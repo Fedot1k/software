@@ -1,4 +1,4 @@
-def ss(n, b):
+def ss(n, b): # функция перевода в системы счисления
     res = []
     while n:
         res.append(n%b)
