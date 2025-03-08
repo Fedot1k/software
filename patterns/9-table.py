@@ -1,4 +1,4 @@
-with open('stuff/task.txt') as file: # получение данных из текста
+with open('stuff/9-data.txt') as file: # получение данных из текста
     lines = file.readlines()
 
 table = [list(map(int, line.split())) for line in lines] # table = двумерный список из строчек с числами
