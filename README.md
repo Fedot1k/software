@@ -1,17 +1,5 @@
-# Informatics EGE 2025 | About
+# informatics ege 2025 | about
 
-**Programs** To Get **100**.
+**programs** to get **100**.
 
-• **Best ways to solve**
-
-• **Every problem pattern**
-
-• **Private -> Public**
-
-## Sources
-
-• **Moscow Programming School**
-
-• **Open Data From The Internet**
-
-> Dream Big 2025
+> dream big 2025
