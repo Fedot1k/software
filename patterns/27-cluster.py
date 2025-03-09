@@ -25,7 +25,7 @@ def centroid(cluster): # функция нахождения центроида 
             minim = res
             xCentre, yCentre = cluster[i]
 
-    return [xCentre, yCentre]
+    return xCentre, yCentre
 
 
 x1, y1 = centroid(cluster1)
