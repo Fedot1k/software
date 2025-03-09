@@ -1,5 +1,3 @@
-# informatics ege 2025 | about
+# comp science exam 2025 | about
 
-###
-
-**programs** to get **100**.
+**programs for 100**
