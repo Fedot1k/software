@@ -1,7 +1,7 @@
 from functools import lru_cache
 
 def move(s):
-    return (s + 1, s * 3) if s * 3 <= 80 else ((s + 1, ) if s + 1 <= 80 else ()) # возможные действия, верхнее ограничение = не передавать
+    return tuple([x for x in [s + 1, s * 3] if x <= 80]) # возможные действия, верхнее ограничение = не передавать
 
 @lru_cache(None)
 
