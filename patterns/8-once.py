@@ -2,7 +2,7 @@ from itertools import permutations
 
 cnt = 0
 
-for x in set(permutations('01234567', 6)): # неповторяющиеся символы
+for x in set(permutations('01234567', 6)):  # неповторяющиеся символы
 
     text = ''.join(x)
 

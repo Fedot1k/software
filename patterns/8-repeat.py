@@ -2,7 +2,7 @@ from itertools import product
 
 cnt = 0
 
-for one in product('0123456789ABCDE', repeat=5): # повторяющиеся символы, repeat = количество символов
+for one in product('0123456789ABCDE', repeat=5):  # повторяющиеся символы, repeat = количество символов
 
     text = ''.join(one)
 
