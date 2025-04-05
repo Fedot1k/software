@@ -3,7 +3,7 @@ from functools import lru_cache
 
 def move(s):
     a, b = s
-    return (a + 1, b), (a, b + 1), (a * 2, b), (a, b * 2)  # возможные действия, верхнее ограничение = не передавать
+    return (a + 1, b), (a * 2, b), (a, b + 1), (a, b * 2)  # возможные действия, верхнее ограничение = не передавать
 
 
 @lru_cache(None)

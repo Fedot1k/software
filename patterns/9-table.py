@@ -1,7 +1,7 @@
 with open('stuff/9-data.txt') as file:  # получение данных из текста
     lines = file.readlines()
 
-big = [list(map(int, line.split())) for line in lines]  # table = двумерный список из строчек с числами
+big = [list(map(int, line.split())) for line in lines]  # big = двумерный список из строчек с числами
 
 
 for row in range(len(big)):
