@@ -3,7 +3,7 @@ import math
 with open('stuff/27-coordinate.txt') as file:
     file.readline()
 
-    cluster1, cluster2 = [], [] # распределение точек по кластерам через координаты из графика таблицы
+    cluster1, cluster2 = [], []  # распределение точек по кластерам через координаты из графика таблицы
     for i in file:
         x, y = map(float, i.replace(',', '.').split())
 
@@ -13,7 +13,7 @@ with open('stuff/27-coordinate.txt') as file:
             cluster2.append((x, y))
 
 
-def centroid(cluster): # функция нахождения центроида кластера
+def centroid(cluster):  # функция нахождения центроида кластера
     xCentre, yCentre, minim = 0, 0, 10**10
 
     for i in range(len(cluster)):
@@ -25,7 +25,7 @@ def centroid(cluster): # функция нахождения центроида 
             minim = res
             xCentre, yCentre = cluster[i]
 
-    return [xCentre, yCentre]
+    return xCentre, yCentre
 
 
 x1, y1 = centroid(cluster1)

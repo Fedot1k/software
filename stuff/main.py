@@ -1,19 +1,13 @@
-twos = [2**n for n in range(0, 20)]
+with open('stuff/17-1.txt') as file:
+    big = list(map(int, file))
+
 res = []
 
-for j in range(65, 100):
-    for n in range(1, j):
+maxElem = max([x for x in big if x % 111 == 0])
 
-        s = '0' + '1' * n + '2' * (j-1-n)
 
-        g = sum(int(i) for i in s)
+for n in range(len(big) - 1):
+    if (big[n] > maxElem or big[n + 1] > maxElem) and (big[n] % 10 == 7 or big[n + 1] % 10 == 7):
+        res.append(big[n] + big[n + 1])
 
-        while ('01' in s) or ('02' in s):
-            s = s.replace('02', '110', 1)
-            s = s.replace('01', '2120', 1)
-
-        if sum(int(i) for i in s) in twos:
-            print(j, n)
-            res.append(g)
-
-print(min(res))
+print(len(res), min(res))

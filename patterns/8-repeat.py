@@ -2,13 +2,13 @@ from itertools import product
 
 cnt = 0
 
-for one in product('0123456789ABCDE', repeat=5): # повторяющиеся символы, repeat = количество символов
+for x in product('0123456789ABCDE', repeat=5):  # повторяющиеся символы, repeat = количество символов
 
-    text = ''.join(one)
+    s = ''.join(x)
 
-    amount = text.count('A') + text.count('B') + text.count('C') + text.count('D') + text.count('E')
+    amount = s.count('A') + s.count('B') + s.count('C') + s.count('D') + s.count('E')
 
-    if (text[0] != '0') and (text.count('8') == 1) and (amount >= 2):
+    if (s[0] != '0') and (s.count('8') == 1) and (amount >= 2):
         cnt += 1
 
 print(cnt)

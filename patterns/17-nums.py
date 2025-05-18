@@ -1,13 +1,13 @@
 with open('stuff/17-range.txt') as file:
-    nums = [int(x) for x in file.readlines()]
+    big = list(map(int, file))
 
 res = []
 
-maxElem = max([x for x in nums if x%10==7])
+maxElem = max([x for x in big if x % 10 == 7])
 
 
-for i in range(len(nums) - 2):
-    three = [nums[i], nums[i+1], nums[i+2]]
+for n in range(len(big) - 2):
+    three = [big[n], big[n + 1], big[n + 2]]
 
     first = [int(str(abs(x))[0]) for x in three]
     second = [x for x in three if len(str(abs(x))) == 3 and str(abs(x))[-1] == '7']
